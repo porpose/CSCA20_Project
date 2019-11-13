@@ -1,6 +1,7 @@
 authorize_personnel_list = []
 authorize_personnel_list.append("quanfeiy")
 authorize_personnel_list.append("zoujinto")
+
 answer = input("Welcome to criminal risk control system, please enter your id: ")
 if answer == authorize_personnel_list[0] or answer == authorize_personnel_list[1]:
     print("Access verifcation completed, hello "+ str(answer))
@@ -17,8 +18,9 @@ else:
             verification = "true"
         else:
             answer = input("Access deny, you are not authorized to use this system.")        
+            verification = "false"
             from playsound import playsound
-            playsound('FBI_open_up.amr')
+            playsound('fbi-open-up-sfx.mp3')            
     
 if verification == "true":
     answer = input("What would you like to do? Enter read or write: ")
