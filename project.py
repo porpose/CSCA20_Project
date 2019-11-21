@@ -15,17 +15,17 @@ while answer == "":
     print("You are not allow to enter empty id, please try again")
     answer = input("Welcome to criminal risk control system, please enter your id: ")
 if answer == authorize_personnel_list[0] or answer == authorize_personnel_list[1]:
-        print("Access verifcation completed, hello "+ str(answer))
+        print("Access verifcation completed, hello "+ answer)
         verification = "true"
 else:
     answer = input("Access deny, you have 2 more chances. Enter your id: ")
     if answer == authorize_personnel_list[0] or answer == authorize_personnel_list[1]:
-            print("Access verifcation completed, hello "+ str(answer))
+            print("Access verifcation completed, hello "+ answer)
             verification = "true"        
     else:
         answer = input("Access deny, you have 1 more chance. Enter your id: ")    
         if answer == authorize_personnel_list[0] or answer == authorize_personnel_list[1]:
-            print("Access verifcation completed, hello "+ str(answer))
+            print("Access verifcation completed, hello "+ answer)
             verification = "true"
         else: 
             print("Access deny, you are not authorized to use this system.")
@@ -35,8 +35,8 @@ else:
                                
     
  #This is the search module in the project   
-if str(verification) == "true":
-    answer = input("What would you like to do? Enter read or write or search or add or remove: ")
+if verification == "true":
+    answer = input("What would you like to do? Enter read or update or search or add or remove: ")
     if answer == "read":
         my_file = open("crime_record_list.csv", "r")
         my_file = csv.reader(my_file)
@@ -56,37 +56,49 @@ if str(verification) == "true":
         #Loop through the file to find the record base on the name
         #loop through the file from the first record to the end
         #once find out the name, we print out the record
+    def search():
+            my_file = open("crime_record_list.csv", "r")
+            my_file = csv.reader(my_file)
+            data = list(my_file)
+            criminal_id = input("Please enter the criminal id: ")
+            print(data[0],data[int(criminal_id)])
+    
     if answer == "search":
-        my_file = open("crime_record_list.csv", "r")
-        my_file = csv.reader(my_file)
-        data = list(my_file)
-        criminal_id = input("please enter the criminal id: ")
-        print(data[0],data[int(criminal_id)])
-   
-if answer == "add":
-    
-    '''(str,str,str,str,str,str,str) -> Nonetype
-    Base on the entry, add new crime record to the file.
-    >>>Please enter ID: 5
-    >>>Please enter First name: Ken
-    >>>Please enter Last name: Zolberg
-    >>>Please enter gender: M
-    >>>Please enter the date of birth(yyyy-mm-dd): 2000-01-01
-    >>>Please enter crime_title: kidnap
-    >>>Please enter incident date: 2000-01-02
-    '''
-    
-    ID = input("Please enter ID: ")
-    First_name = input("Please enter First name: ")
-    Last_name = input("Please enter Last name: ")
-    gender = input("Please enter the gender(M/F): ")
-    date_of_birth = input("Please enter the date of birth(yyyy-mm-dd): ")
-    crime_title = input("Please enter the crime title: ")
-    incident_date = input("Please enter the incident date(yyyy-mm-dd): ")
-    crime_record = [ID, First_name, Last_name, gender, date_of_birth, crime_title, incident_date]
-    with open("crime_record_list.csv", "a") as fd:
-        wr = csv.writer(fd, dialect='excel')
-        wr.writerow(crime_record)
-    print("Record successfully added!")
+        search()
 
+    if answer == "add":
+    
+        '''(str,str,str,str,str,str,str) -> Nonetype
+        Base on the entry, add new crime record to the file.
+        >>>Please enter ID: 5
+        >>>Please enter First name: Ken
+        >>>Please enter Last name: Zolberg
+        >>>Please enter gender: M
+        >>>Please enter the date of birth(yyyy-mm-dd): 2000-01-01
+        >>>Please enter crime_title: kidnap
+        >>>Please enter incident date: 2000-01-02
+        '''
+    
+        ID = input("Please enter ID: ")
+        First_name = input("Please enter First name: ")
+        Last_name = input("Please enter Last name: ")
+        gender = input("Please enter the gender(M/F): ")
+        date_of_birth = input("Please enter the date of birth(yyyy-mm-dd): ")
+        crime_title = input("Please enter the crime title: ")
+        incident_date = input("Please enter the incident date(yyyy-mm-dd): ")
+        crime_record = [ID, First_name, Last_name, gender, date_of_birth, crime_title, incident_date]
+        with open("crime_record_list.csv", "a") as fd:
+            wr = csv.writer(fd, dialect='excel')
+            wr.writerow(crime_record)
+        print("Record successfully added!")
+        
+    if answer == "update":
+        search()
+        answer1 = input("What do you want to change?: ")
+        answer2 = input("What do you want this item be changed to?: ")
+        index = data[0].index(answer1)
+        data[int(criminal_id)][index] = answer2
+        print("Record updated successfully!")
+        
 exit = input("Press Enter to exit...")   
+
