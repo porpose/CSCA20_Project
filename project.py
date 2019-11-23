@@ -1,4 +1,4 @@
-#This is the security module in the project, you have three chance to enter
+#This is the security module in the project, you have three chances to enter
 #the correct password, otherwise the program will lock and trigger the alarm.
 import csv
 from playsound import playsound
@@ -56,16 +56,13 @@ if verification == "true":
         #Loop through the file to find the record base on the name
         #loop through the file from the first record to the end
         #once find out the name, we print out the record
-    def search():
-            my_file = open("crime_record_list.csv", "r")
-            my_file = csv.reader(my_file)
-            data = list(my_file)
-            criminal_id = input("Please enter the criminal id: ")
-            print(data[0],data[int(criminal_id)])
-    
-    if answer == "search":
-        search()
 
+    if answer == "search":
+        my_file = open("crime_record_list.csv", "r")
+        my_file = csv.reader(my_file)
+        data = list(my_file)
+        criminal_id = input("Please enter the criminal id: ")
+        print(data[0],data[int(criminal_id)])
     if answer == "add":
     
         '''(str,str,str,str,str,str,str) -> Nonetype
@@ -93,12 +90,20 @@ if verification == "true":
         print("Record successfully added!")
         
     if answer == "update":
-        search()
+        my_file = open("crime_record_list.csv", "r")
+        my_file = csv.reader(my_file)
+        data = list(my_file)
+        criminal_id = input("Please enter the criminal id: ")
+        print(data[0],data[int(criminal_id)]) 
         answer1 = input("What do you want to change?: ")
         answer2 = input("What do you want this item be changed to?: ")
         index = data[0].index(answer1)
         data[int(criminal_id)][index] = answer2
+        with open('crime_record_list.csv', 'w', newline="") as writer_file:
+            writer = csv.writer(writer_file)
+            writer.writerows(data)        
+        writer_file.close()        
         print("Record updated successfully!")
-        
+
 exit = input("Press Enter to exit...")   
 
