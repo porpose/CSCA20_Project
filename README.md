@@ -7,27 +7,27 @@ By porpose & MacTavish 29
 ### Why we build this system?
 - ~~To earn marks and get GPA 4.0, eventually become a great computer scientist (like Brian) of course!~~
 
-- To show that it is possible for a student in introductory CS course to build a workable project.
+- To show that it is possible for a student in an introductory CS course to build a workable project.
 
 - To enhance our understanding of Python and other programming knowledge.
 
 ### Setup of the Program
 - Download the source code from [here](https://github.com/porpose/CSCA20_Project/archive/master.zip).
 
-- Install the 3rd party playsound module. You can either follow instructions on its [offical website](https://pypi.org/project/playsound/) or run the setup file in the playsound-master folder of our source code.
+- Install the 3rd party playsound module. You can either follow instructions on its [official website](https://pypi.org/project/playsound/) or run the setup file in the playsound-master folder of our source code.
 
 - Run project.py.
 
 ### Basic Functions in the Project
-- Ask user to enter the correct ID. Entering unauthorized IDs for more than 3 times will trigger an alarm and the only way to stop it is to restart the program.
+- Ask the user to enter the correct username. Entering unauthorized usernames for more than 3 times will trigger an alarm and the only way to stop it is to restart the program. Entering a blank username is not allowed by the program.
 
 - Read the record file. This will display all the data stored in the criminal record file.
 
-- Search for specific record. Each criminal has an assigned ID. Enter the associated ID for a criminal and the system will show the information of that particular criminal.
+- Search for a specific record. Each criminal has an assigned ID. Enter the associated ID for a criminal and the system will show the information of that particular criminal.
 
-- Add new record. Create a new criminal ID and then enter all the other information such as name, date of birth, crime title, etc. so that the system will write this new record to the existing record file. Blank information will not be accepted by the system.
+- Add a new record. Create a new criminal ID and then enter all the other information such as name, date of birth, crime title, etc. so that the system will write this new record to the existing record file. Blank information will not be accepted by the system.
 
-- Update old record. Enter the ID for a desired criminal record that you would like to change and indicate what modification you want to do. The system will then replace the old record with the new one.
+- Update old records. Enter the ID for a desired criminal record that you would like to change and indicate what modification you want to do. The system will then replace the old record with the new one.
 
 - Remove a record. This will literally remove a record that has the ID that you enter. The system will display the information for that criminal before deleting it.
 
