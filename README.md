@@ -9,7 +9,7 @@ By porpose & MacTavish 29
 
 - To show that it is possible for a student in introductory CS course to build a workable project.
 
-- To enhance our understanding of Python and other programming knowledges.
+- To enhance our understanding of Python and other programming knowledge.
 
 ### Setup of the Program
 - Download the source code from [here](https://github.com/porpose/CSCA20_Project/archive/master.zip).
