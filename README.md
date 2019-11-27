@@ -2,7 +2,7 @@
 
 By porpose & MacTavish 29
 
-*Notice: This might be the most stupid project ever in the history of UTSC's CSCA20 course.*
+*Notice: Please watch out the system volume when triggering the alarm.*
  
 ### Why we build this system?
 - ~~To earn marks and get GPA 4.0, eventually become a great computer scientist (like Brian) of course!~~
@@ -39,5 +39,15 @@ By porpose & MacTavish 29
 -  This is [the website](https://stackoverflow.com/questions/28277150/write-a-list-in-a-python-csv-file-one-new-row-per-list) where we learned how to tell python to write the information we need into the CSV file.    
 
 ### About
+- Author: porpose
+- Email: porpose@outlook.com
 
-### To be continued....
+- Co-author: MacTavish 29
+- Email: zou.jintong@mail.utoronto.ca
+
+- Project start date: 2019-11-12
+- Finish date of the major part of the project: 2019-11-26
+
+- [Click here](https://youtu.be/s69V1yZIq5U) to view the demonstration video of the program.
+
+
