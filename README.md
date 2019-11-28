@@ -19,7 +19,7 @@ By porpose & MacTavish 29
 - Run project.py.
 
 ### Basic Functions in the Project
-- Ask the user to enter the correct username. Entering unauthorized usernames for more than 3 times will trigger an alarm and the only way to stop it is to restart the program. Entering a blank username is not allowed by the program.
+- Ask the user to enter the correct username. Entering unauthorized usernames for more than 3 times will trigger an alarm and the only way to stop it is to restart the program. Entering a blank username is not allowed by the program. The only allowed usernames for now are my partnet's and my utorid which you can actually retrieve from the source code or from our demo video.
 
 - Read the record file. This will display all the data stored in the criminal record file.
 
@@ -48,6 +48,6 @@ By porpose & MacTavish 29
 - Project start date: 2019-11-12
 - Finish date of the major part of the project: 2019-11-26
 
-- [Click here](https://youtu.be/s69V1yZIq5U) to view the demonstration video of the program.
+- [Click here](https://youtu.be/U3eLtnzCwKk) to view the demonstration video of the program.
 
 
